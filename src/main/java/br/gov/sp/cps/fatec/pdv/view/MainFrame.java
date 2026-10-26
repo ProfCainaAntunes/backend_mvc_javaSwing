@@ -36,7 +36,7 @@ public class MainFrame extends JFrame {
     private final ProdutoFormView formView;
 
     public MainFrame() {
-        super("PDV - Gestão de Produtos (FATEC - Técnicas de Programação II)");
+        super("PDV - Gestão de Produtos");
 
         this.cardLayout = new CardLayout();
         this.painelPrincipal = new JPanel(cardLayout);

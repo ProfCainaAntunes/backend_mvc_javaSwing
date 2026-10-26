@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
 
     <name>PDV-Swing-JPA</name>
-    <description>Projeto Didático PDV - Java Swing, JPA/Hibernate, H2, MVC e Padrões GoF (FATEC Concurso Público)</description>
+    <description>Projeto Didático PDV - Java Swing, JPA/Hibernate, H2, MVC e Padrões GoF</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

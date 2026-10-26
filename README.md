@@ -1,10 +1,9 @@
+![senai_logo](./logo_unisenai.png)
+
 # PDV-Swing-JPA: Persistência de Dados com Frameworks de Interface Gráfica
 
-> **Plano de Aula & Projeto Didático de Referência para Ensino Superior e Concurso Público FATEC**  
-> **Instituição:** Centro Estadual de Educação Tecnológica Paula Souza (CEETEPS) — FATEC Votorantim  
-> **Concurso Público:** Exame Didático — Área: Tecnologia da Informação  
-> **Candidato:** Cainã Antunes Silva  
-> **Curso:** Graduação em Desenvolvimento de Software Multiplataforma (DSM)  
+> **Plano de Aula & Projeto Didático de Referência para Ensino Superior**  
+> **Docente:** Prof. Cainã Antunes Silva  
 > **Disciplina:** Técnicas de Programação II  
 > **Tema da Aula:** Persistência de dados utilizando frameworks de interface gráfica  
 > **Duração:** 50 minutos  
@@ -234,7 +233,7 @@ classDiagram
 | :--- | :--- |
 | **Java 17+ (LTS)** | Linguagem padrão em instituições de ensino técnico e superior, fornecendo estabilidade corporativa aliada a recursos modernos da linguagem. |
 | **Jakarta Persistence (JPA 3.1) & Hibernate 6.x** | Demonstra a separação fundamental entre **especificação padrão** (`jakarta.persistence.*`) e **provedor de implementação** (`org.hibernate.*`). Ensina aos alunos o paradigma ORM, ciclo de vida de entidades (*transient, managed, detached*), mapeamento de constraints e transações atômicas ACID sem acoplamento a SQL proprietário. |
-| **H2 Database (Embutido / Arquivo)** | **Zero-Configuration:** Elimina a necessidade de servidores de banco externos (MySQL/PostgreSQL/Docker), permitindo que bancas examinadoras e estudantes executem a aplicação imediatamente. Os dados persistem no diretório local `./data/pdv_db.mv.db`. |
+| **H2 Database (Embutido / Arquivo)** | **Zero-Configuration:** Elimina a necessidade de servidores de banco externos (MySQL/PostgreSQL/Docker), permitindo que estudantes e desenvolvedores executem a aplicação imediatamente. Os dados persistem no diretório local `./data/pdv_db.mv.db`. |
 | **Java Swing (Código Puro)** | Permite ao docente demonstrar a engenharia de componentes visuais (`JFrame`, `JPanel`), gerenciadores de layout (`CardLayout`, `GridBagLayout`, `BorderLayout`) e o controle rigoroso da **Event Dispatch Thread (EDT)**. |
 | **FlatLaf Look & Feel** | Proporciona estética moderna e profissional à aplicação desktop, superando o aspecto arcaico dos temas tradicionais do Java. |
 | **Maven Wrapper (`mvnw` / `mvnw.cmd`)** | Assegura reproducibilidade estrita de compilação e execução em qualquer plataforma (Windows, Linux, macOS), sem depender de instalação prévia do Maven no sistema operacional. |
@@ -337,14 +336,14 @@ java -jar target/exemplo_persistencia_JavaSwing-1.0.0.jar
 
 ## 9. Cronograma e Desenvolvimento da Aula (50 Minutos)
 
-Este cronograma detalha a articulação didática entre exposição teórica, inspeção de código e demonstração funcional diante da Banca Examinadora:
+Este cronograma detalha a articulação didática entre exposição teórica, inspeção de código e demonstração funcional:
 
 | Etapa | Tempo | Estratégia Pedagógica | Conteúdo Programático Desenvolvido |
 | :---: | :---: | :--- | :--- |
 | **1. Abertura e Situação-Problema** | 00min a 10min | Estudo de Caso Norteador e Contextualização Curricular | Apresentação pessoal, articulação com TP-I e Banco de Dados (PPC), objetivos de aprendizagem (CHA). Introdução à situação-problema do PDV comercial e riscos de acoplar telas a comandos SQL. |
 | **2. Fundamentação Teórica e Arquitetura** | 10min a 25min | Exposição Conceitual Dialogada com Diagramas | Persistência de dados (RAM vs. Disco / ACID), caracterização do Java Swing com IoC, arquitetura MVC (SoC), revisão formal do padrão Observer (GoF), Repository (DDD) e funcionamento do ORM (JPA/Hibernate) para resolução do *impedance mismatch*. Apresentação da *stack* do projeto. |
 | **3. Inspeção da Implementação (Estudo de Caso)** | 25min a 45min | Demonstração Dirigida de Código guiada por Diagrama de Sequência | Condução passo a passo do fluxo "Cadastrar Novo Produto" integrando teoria e prática:<br>• **View → Controller:** Captura de eventos (`ActionListener`) e sanitização de dados.<br>• **Controller → Model:** Validação de domínio em `ProdutoService`.<br>• **Model → Persistência:** Execução de transação ACID no `ProdutoRepositoryImpl` via ORM (`EntityManager` / H2).<br>• **Sincronização Reativa:** Disparo do padrão Observer na EDT do Swing (`fireTableDataChanged`) e repintura da `JTable`. |
-| **4. Síntese e Fechamento** | 45min a 48min | Síntese Integradora e Validação Formativa | Recapitulação do fluxo integrado (Interface → Padrões → Persistência Segura) e abertura da sessão para arguição da Comissão Julgadora. |
+| **4. Síntese e Fechamento** | 45min a 48min | Síntese Integradora e Validação Formativa | Recapitulação do fluxo integrado (Interface → Padrões → Persistência Segura) e abertura da sessão para esclarecimento de dúvidas e discussões. |
 | **5. Proposição Prática e PBL** | 48min a 50min | Aprendizagem Baseada em Projetos (PBL) | Apresentação do repositório público no GitHub, proposta de extensão do núcleo PDV em equipes multidisciplinares (novas entidades e telas) e explicitação da rubrica de avaliação formativa. |
 
 ---
@@ -375,7 +374,7 @@ Em equipes, os estudantes deverão estender a base do projeto para conceber e im
 
 - **Quadro branco e marcadores:** Para esquematização visual e dedução dos fluxos arquiteturais durante a introdução teórica.
 - **Projeção multimídia institucional:** Para exibição dos diagramas conceituais (Mermaid) e demonstração dirigida do código-fonte.
-- **Plano de aula impresso:** Entregue em 3 vias à Comissão Julgadora do Concurso Público.
+- **Plano de aula e roteiro didático:** Material estruturado para acompanhamento da aula teórico-prática.
 - **Repositório de controle de versão (GitHub):** Roteiro e esqueleto do projeto disponibilizados aos estudantes como ponto de partida da atividade prática.
 
 ---
@@ -404,10 +403,9 @@ O repositório foi construído seguindo o modelo **Gitflow** e convenções de *
 - `feature/setup-and-persistence`: Configuração Maven, JPA Hibernate 6, H2 Database, Entidade `Produto`, Repositório e testes unitários.
 - `feature/views-and-tablemodel`: Construção dos componentes visuais Swing (`ProdutoTableModel`, `ProdutoFormView`, `ProdutoListView`, `MainFrame`).
 - `feature/controller-and-observer`: Implementação da orquestração do `ProdutoController`, serviço de validações `ProdutoService` e sincronização via `ProdutoObserver`.
-- `docs/didactic-documentation`: Elaboração completa da documentação pedagógica, plano de aula para exame didático e diagramas arquiteturais.
+- `docs/didactic-documentation`: Elaboração completa da documentação pedagógica, plano de aula e diagramas arquiteturais.
 
 ---
 
-**Centro Estadual de Educação Tecnológica Paula Souza — FATEC Votorantim**  
-*Curso de Desenvolvimento de Software Multiplataforma | Técnicas de Programação II*  
-*Prof. Cainã Antunes Silva*
+*Prof. Cainã Antunes Silva*  
+*Técnicas de Programação II*
